@@ -81,7 +81,8 @@ header {
         width: 300px;
         left: -300px;
         top: 0;
-        height: 100%;
+		bottom: 0;
+        max-height: 100%;
         background-color: rgb(70, 70, 70);
         z-index: 1;
         -webkit-transition: left 0.2s ease-in-out;
