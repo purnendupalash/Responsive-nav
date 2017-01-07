@@ -1,14 +1,17 @@
 body {
-    font-family: 'Roboto', sans-serif;
+   font-family: 'Fira Sans', sans-serif;
+    
 }
 
-header {
+.header {
     position: fixed;
+    z-index: 1;
     height: 60px;
-    background-color: rgb(70, 70, 70);
+    background-color: white;
     left: 0;
     top: 0;
     right: 0;
+    box-shadow: 3px 0 3px black;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -39,7 +42,7 @@ header {
 
 
 .menu-side ul li a {
-    color: white;
+    color: #454545;
     text-decoration: none;
     padding-right: 20px;
     
@@ -72,25 +75,42 @@ header {
 }
 
 .about {
-    height: 2000px;
+    margin-top: 60px;
+    background: url('../img/about-bg.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    padding: 100px 0;
+    margin-bottom: 1000px;
+}
+
+
+
+.about h2 {
+    font-size: 60px;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.about p {
+    font-size: 36px;
+    padding-bottom: 30px;
+    line-height: 1;
+    padding-left: 108px;
+ 
 }
 
 @media (max-width: 768px) {
     
-    body {
-        overflow-y: hidden;
-    }
-    
-    
-    .menu-side {
+   .menu-side {
         position: fixed;
         width: 300px;
         left: -300px;
         top: 0;
         height: 100%;
         overflow-y: scroll;
-        background-color: rgb(70, 70, 70);
-        z-index: 1;
+        background-color: white;
         -webkit-transition: left 0.2s ease-in-out;
         transition: left 0.2s ease-in-out;
         
@@ -122,7 +142,7 @@ header {
     }
     
     .menu-toggle i {
-        color: white;
+        color: #454545;
         font-size: 30px;
     }
     
@@ -130,28 +150,49 @@ header {
         display: inline;
         text-align: left;
         margin-left: 20px;
-        color: white;
+        color: #525252;
     }
     .menu-open {
         left: 0px;
+    }
+    
+    .about {
+        padding: 50px 0;
+        text-align: center;
+        
+    }
+    .about p {
+       padding: 0;
+       
+    }
+    
+    .about h2 {
+        font-size: 66px;
+        line-height: 0.9;
     }
 
 }
 
 @media (max-width: 500px) {
     .menu-side {
-        position: fixed;
-        width: 240px;
-        left: -240px;
-        top: 0;
-        height: 100%;
-        background-color: rgb(70, 70, 70);
-        
+       
+        width: 100%;
+        left: -100%;
     }
     
     .menu-open {
         left: 0px;
     }
 
+}
+
+@media (max-width: 315px) {
+    .about h2 {
+        font-size: 52px;
+    }
+    
+    .about p {
+        font-size: 32px;
+    }
 }
 
